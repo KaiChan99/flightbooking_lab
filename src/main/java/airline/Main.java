@@ -5,4 +5,8 @@ public class Main {
         System.out.println("Faizan stinks");
         System.out.println("Kai stinks");
     }
+
+
+
+
 }

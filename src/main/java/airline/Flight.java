@@ -17,4 +17,21 @@ public class Flight {
   }
 
 
+  // Getters & Setters
+
+  public String getDestination() {
+    return destination;
+  }
+
+  public void setDestination(String destination) {
+    this.destination = destination;
+  }
+
+  public int getFlightID() {
+    return flightID;
+  }
+
+  public void setFlightID(int flightID) {
+    this.flightID = flightID;
+  }
 }
