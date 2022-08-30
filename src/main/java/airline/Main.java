@@ -10,20 +10,21 @@ Passenger passenger1 = new Passenger("Bob", "Bob@gmail.com", 1);
 Airline airline1 = new Airline("Ryanair");
 Airline airline2 = new Airline("EasyJet");
 
+// testing adding and cancelling flights
         airline1.addNewFlight(flight1);
         airline1.addNewFlight(flight2);
-airline1.cancelFlight(flight1);
-  airline1.displayAvailFlights();
+        System.out.println(airline1.getAllFlightsCount());
+//airline1.cancelFlight(flight1);
+        System.out.println(airline1.displayAvailFlights());
 
 
-
-
-
-
-
-
-
-
+// testing adding passengers to flight
+//flight2.bookPassenger(passenger1);
+//flight2.displayPassengers();
+//
+//flight1.bookPassenger(passenger1);
+//passenger1.addFlightBooking(flight1);
+//passenger1.getFlightBooking();
 
 
 // end of code
