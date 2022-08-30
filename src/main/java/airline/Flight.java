@@ -22,7 +22,16 @@ public class Flight {
     this.flightPassengers.add(passenger);
   }
 
-
+// Display passengers on flight
+  public String displayPassengers(){
+    if(flightPassengers.isEmpty()){
+      System.out.println("no passengers on flight");
+    }else{
+      for (Passenger passenger : flightPassengers){
+        System.out.println("Passenger ID: "+passenger.getId()+" Passenger name: " +passenger.getName());
+      }}
+    return null;
+  }
 
   // Getters & Setters
 
