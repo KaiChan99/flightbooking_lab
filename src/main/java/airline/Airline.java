@@ -13,6 +13,17 @@ public class Airline {
 
     }
 
+    // Display available flights
+
+//public String DisplayAvailFlights(){
+//        for (Flight flight : allFlights){
+//           System.out.println(allFlights);
+//        }
+//    return null;
+//}
+
+
+
 
     // Getters & Setters
 
@@ -24,4 +35,6 @@ public class Airline {
     public void setAirlineName(String airlineName) {
         this.airlineName = airlineName;
     }
+
+
 }
