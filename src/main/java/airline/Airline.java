@@ -13,14 +13,24 @@ public class Airline {
 
     }
 
+    public void addNewFlight(Flight flight){
+        this.allFlights.add(flight);
+    }
+
+public void cancelFlight(Flight flight){
+        this.allFlights.remove(flight);
+}
     // Display available flights
 
-//public String DisplayAvailFlights(){
-//        for (Flight flight : allFlights){
-//           System.out.println(allFlights);
-//        }
-//    return null;
-//}
+public String displayAvailFlights(){
+        if(allFlights.isEmpty()){
+            System.out.println("no flights available");
+        }else{
+        for (Flight flight : allFlights){
+           System.out.println("Flight ID: "+flight.getFlightID()+" Destination: " +flight.getDestination()+" Airline: "+getAirlineName());
+        }}
+    return null;
+}
 
 
 
