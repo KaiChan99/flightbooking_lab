@@ -21,7 +21,7 @@ public Passenger(String name, String contact, int id){
 
 
 // Adding flight to passengersBooking
-    public void AddFlightReservation(Flight flight){
+    public void addFlightReservation(Flight flight){
         this.flightBooking.add(flight);
     }
 
