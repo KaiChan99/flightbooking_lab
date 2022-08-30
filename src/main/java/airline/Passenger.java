@@ -8,6 +8,10 @@ public class Passenger {
 
     private int id;
 
-
+public Passenger(String name, String contact, int id){
+    this.name = name;
+    this.contact = contact;
+    this.id = id;
+}
 
 }
