@@ -44,7 +44,7 @@ public class AirlineTest {
     @Test
     public void canAddAndDisplayNewFlight(){
         airline.addNewFlight(flight1); // new Flight("Madrid",1);
-        assertThat(airline.displayAvailFlights()).isEqualTo("Flight ID: "+1+" Destination: " +"Madrid"+" Airline: "+"Ryanair");
+        assertThat(airline.displayAvailFlights()).isEqualTo("Flight ID: "+1+" | Destination: " +"Madrid"+" | Airline: "+"Ryanair");
 
     }
 }

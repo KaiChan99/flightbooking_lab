@@ -28,7 +28,7 @@ public class Flight {
       System.out.println("no passengers on flight");
     }else{
       for (Passenger passenger : flightPassengers){
-        System.out.println("Passenger ID: "+passenger.getId()+" Passenger name: " +passenger.getName());
+        System.out.println("Passenger ID: "+passenger.getId()+" | Passenger name: " +passenger.getName());
       }}
     return null;
   }

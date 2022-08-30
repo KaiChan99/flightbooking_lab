@@ -21,10 +21,11 @@ Airline airline2 = new Airline("EasyJet");
 // testing adding passengers to flight
 //flight2.bookPassenger(passenger1);
 //flight2.displayPassengers();
-//
-//flight1.bookPassenger(passenger1);
-//passenger1.addFlightBooking(flight1);
-//passenger1.getFlightBooking();
+
+// testing adding flight booking to a passenger
+flight1.bookPassenger(passenger1);
+passenger1.addFlightBooking(flight1);
+        System.out.println(passenger1.getFlightBooking());
 
 
 // end of code

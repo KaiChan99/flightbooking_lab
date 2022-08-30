@@ -16,15 +16,24 @@ public Passenger(String name, String contact, int id){
     this.name = name;
     this.contact = contact;
     this.id = id;
-    this.flightBooking = flightBooking;
+    this.flightBooking = new ArrayList<>();
 }
 
 
 // Adding flight to passengersBooking
-    public void addFlightReservation(Flight flight){
+    public void addFlightBooking(Flight flight){
         this.flightBooking.add(flight);
     }
-
+// Display flights in  passengerBooking
+public String getFlightBooking(){
+    if(flightBooking.isEmpty()){
+        return "this passenger has no flights booked yet";
+    }else{
+        for (Flight flight : flightBooking){
+            return this.name +" is travelling to "+flight.getDestination() +" | Flight ID: "+flight.getFlightID();
+        }}
+    return null;
+}
 
 
 // Getters & Setters
