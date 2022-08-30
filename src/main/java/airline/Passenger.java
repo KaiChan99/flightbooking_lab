@@ -1,5 +1,7 @@
 package airline;
 
+import java.util.ArrayList;
+
 public class Passenger {
 
     private String name;
@@ -8,12 +10,20 @@ public class Passenger {
 
     private int id;
 
+    private ArrayList<Flight> flightBooking;
+
 public Passenger(String name, String contact, int id){
     this.name = name;
     this.contact = contact;
     this.id = id;
+    this.flightBooking = flightBooking;
 }
 
+
+// Adding flight to passengersBooking
+    public void AddFlightReservation(Flight flight){
+        this.flightBooking.add(flight);
+    }
 
 
 

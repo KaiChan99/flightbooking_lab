@@ -17,6 +17,13 @@ public class Flight {
   }
 
 
+  // Adding passenger to flight
+  public void BookPassenger(Passenger passenger){
+    this.flightPassengers.add(passenger);
+  }
+
+
+
   // Getters & Setters
 
   public String getDestination() {
