@@ -40,15 +40,19 @@ passenger1.addFlightBooking(flight1);
         String input;
         Scanner scanner = new Scanner(System.in);
 
-        List<Object> listOfObject = new ArrayList<>();
+        List<Passenger> listOfPassenger = new ArrayList<>();
+        List<Flight> listOfFlight = new ArrayList<>();
+
         do {
             System.out.println("Flight Booking Menu");
             System.out.println("1. Add a new Flight");
             System.out.println("2. Add a new Passenger");
             System.out.println("3. Display all available flights");
-            System.out.println("4. Quit");
+            System.out.println("4. Book a Passenger onto a flight");
+            System.out.println("5. Cancel a flight");
+            System.out.println("6. Quit");
 
-            System.out.print("Please enter either 1 to 4: ");
+            System.out.print("Please enter either 1 to 6: ");
             input = (scanner.nextLine());
             if (input.equals("1")) {
                 Flight flight1 = new Flight();
@@ -59,25 +63,56 @@ passenger1.addFlightBooking(flight1);
                 System.out.println("What is the flight ID?");
                 int flightID = scanner.nextInt();
                 flight1.setFlightID(flightID);
-                listOfObject.add(flight1);
+                listOfFlight.add(flight1);
+                airline1.addNewFlight(flight1);
                 System.out.println("great! we have added a flight to " +flight1.getDestination()+" flight ID: "+flight1.getFlightID());
                 input = (scanner.nextLine());
             } else if (input.equals("2")) {
                 Passenger passenger1 = new Passenger();
-                listOfObject.add(passenger1);
+                System.out.println("Please enter passenger's name");
+                String name = scanner.nextLine();
+                passenger1.setName(name);
+
+                System.out.println("Please enter passenger's email");
+                String contact = scanner.nextLine();
+                passenger1.setContact(contact);
+
+                System.out.println("Please enter passenger's ID");
+                int id = scanner.nextInt();
+                passenger1.setId(id);
+
+
+                listOfPassenger.add(passenger1);
+
+                System.out.println("great! we have added a passenger: " +passenger1.getName()+" ID: "+passenger1.getId());
+                input = (scanner.nextLine());
+
             } else if (input.equals("3")) {
                 System.out.println(airline1.displayAvailFlights());
+
+            } else if (input.equals("4")) {
+             Flight flight0 = listOfFlight.get(0);
+             Passenger passenger0 = listOfPassenger.get(0);
+
+             flight0.bookPassenger(passenger0);
+                flight0.displayPassengers();
+                System.out.println(flight0.getDestination());
+                System.out.println(passenger0.getId());
+            }
+
+
+
+        }while(!input.equals("6"));
+
+    }
+}
 //                    for(Object obj : listOfObject){
 //                        if(obj instanceof Flight) {              // So it checks for flights in the object list if true - print flights
 //                            Flight flight1 = (Flight) obj;
 //                            System.out.println(flight1.toString());
 //            }
 //        }
-            }
-        }while(!input.equals("4"));
 
-    }
-}
 
 //        Flight flight1 = new Flight();
 
