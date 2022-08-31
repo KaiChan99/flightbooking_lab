@@ -32,7 +32,7 @@ public String getFlightBooking(){
         for (Flight flight : flightBooking){
             return this.name +" is travelling to "+flight.getDestination() +" | Flight ID: "+flight.getFlightID();
         }}
-    return null;
+    return "";
 }
 
 

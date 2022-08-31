@@ -29,26 +29,26 @@ public class Airline {
     }
     // Display available flights
 
-    public String displayAvailFlights() {
+    public void displayAvailFlights() {
         if (allFlights.isEmpty()) {
-            return "no flights available";
+            System.out.println("no flights available");
         } else {
             for (Flight flight : allFlights) {
                 System.out.println("Flight ID " + flight.getFlightID() + " | Destination: " + flight.getDestination() + " | Airline: " + getAirlineName());
             }
         }
-        return null;
+
     }
 
-    public String displayAllPassengers() {
+    public void displayAllPassengers() {
         if (allPassengers.isEmpty()) {
-            return "no passengers in lobby";
+            System.out.println("no passengers in lobby");;
         } else {
             for (Passenger passenger : allPassengers) {
                 System.out.println("Passenger waiting: " + passenger.getName() + " ID: " + passenger.getId());
             }
         }
-        return null;
+
     }
 
     public void addPassengerLobby(Passenger passenger) {
@@ -56,25 +56,26 @@ public class Airline {
     }
 
     public Passenger findPassenger(int id) {
+        Passenger foundPassenger = null;
+
         for (Passenger passenger : allPassengers) {
             if (passenger.getId() == id) {
-                return passenger;
-            } else {
-                System.out.println("no such passenger exists");
-                return null;
+                foundPassenger = passenger;
+                break;
             }
-        }return null;
+
+        }return foundPassenger;
     }
 
     public Flight findFlight(int id) {
+        Flight foundFlight = null;
+
         for (Flight flight : allFlights) {
             if (flight.getFlightID() == id) {
-                return flight;
-            } else {
-                System.out.println("no such flight exists");
-                return null;
+                foundFlight = flight;
+                break;
             }
-        }return null;
+        }return foundFlight;
     }
 
 

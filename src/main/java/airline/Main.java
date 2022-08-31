@@ -155,10 +155,13 @@ passenger1.addFlightBooking(flight1);
 //                System.out.println(passenger0.getId());
 
             } else if (input.equals("5")){
-                Flight flight0 = listOfFlight.get(0);
-                airline1.cancelFlight(flight0);
-                System.out.println(airline1.displayAvailFlights());
+//                Flight flight0 = listOfFlight.get(0);
 
+                System.out.println("Which flight do you want to cancel? Select ID: ");
+                Integer flightID= scanner.nextInt();
+                airline1.cancelFlight(airline1.findFlight(flightID));
+                airline1.displayAvailFlights();
+                input = (scanner.nextLine());
             }
 
 

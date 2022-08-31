@@ -31,7 +31,7 @@ public class Flight {
       for (Passenger passenger : flightPassengers){
         System.out.println("Passenger ID: "+passenger.getId()+" | Passenger name: " +passenger.getName());
       }}
-    return null;
+    return "";
   }
 
   // Getters & Setters
