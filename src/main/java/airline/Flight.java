@@ -10,7 +10,7 @@ public class Flight {
 
   private ArrayList<Passenger> flightPassengers;
   private Passenger passenger;
-  public Flight()//String destination, int flightID)
+  public Flight()
   {
     this.destination = destination;
     this.flightID = flightID;
