@@ -12,7 +12,7 @@ public class Passenger {
 
     private ArrayList<Flight> flightBooking;
 
-public Passenger(String name, String contact, int id){
+public Passenger(){
     this.name = name;
     this.contact = contact;
     this.id = id;
