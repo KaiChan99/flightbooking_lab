@@ -43,6 +43,41 @@ passenger1.addFlightBooking(flight1);
         List<Passenger> listOfPassenger = new ArrayList<>();
         List<Flight> listOfFlight = new ArrayList<>();
 
+        Flight flight2 = new  Flight();
+        Flight flight3 = new Flight();
+        Flight flight4 = new Flight();
+
+        flight2.setDestination("Budapest");
+        flight2.setFlightID(70);
+        flight3.setDestination("Prague");
+        flight3.setFlightID(99);
+        flight4.setDestination("Barcelona");
+        flight4.setFlightID(88);
+
+        airline1.addNewFlight(flight2);
+        airline1.addNewFlight(flight4);
+        airline1.addNewFlight(flight4);
+
+        Passenger passenger2 = new Passenger();
+        Passenger passenger3 = new Passenger();
+        Passenger passenger4 = new Passenger();
+
+        passenger2.setName("Steve");
+        passenger3.setName("John");
+        passenger4.setName("Dale");
+
+        passenger2.setId(5);
+        passenger3.setId(10);
+        passenger4.setId(20);
+
+        passenger2.setContact("Steve@Gmail.com");
+        passenger3.setContact("John@Gmail.com");
+        passenger4.setContact("Dale@Gmail.com");
+
+
+        
+
+
         do {
             System.out.println("Flight Booking Menu");
             System.out.println("1. Add a new Flight");
@@ -88,7 +123,9 @@ passenger1.addFlightBooking(flight1);
                 input = (scanner.nextLine());
 
             } else if (input.equals("3")) {
-                System.out.println(airline1.displayAvailFlights());
+                airline1.displayAvailFlights();
+
+
 
             } else if (input.equals("4")) {
              Flight flight0 = listOfFlight.get(0);
@@ -98,6 +135,12 @@ passenger1.addFlightBooking(flight1);
                 flight0.displayPassengers();
                 System.out.println(flight0.getDestination());
                 System.out.println(passenger0.getId());
+
+            } else if (input.equals("5")){
+                Flight flight0 = listOfFlight.get(0);
+                airline1.cancelFlight(flight0);
+                System.out.println(airline1.displayAvailFlights());
+
             }
 
 

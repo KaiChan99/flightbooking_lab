@@ -31,7 +31,7 @@ public String displayAvailFlights(){
             return "no flights available";
         }else{
         for (Flight flight : allFlights){
-           return "Flight ID: "+flight.getFlightID()+" | Destination: " +flight.getDestination()+" | Airline: "+getAirlineName();
+            System.out.println("Flight ID "+flight.getFlightID()+" | Destination: " +flight.getDestination()+" | Airline: "+getAirlineName());
         }}
         return null;
 }
