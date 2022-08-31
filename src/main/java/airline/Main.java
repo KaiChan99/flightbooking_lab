@@ -28,6 +28,32 @@ passenger1.addFlightBooking(flight1);
         System.out.println(passenger1.getFlightBooking());
 
 
+        // Start of CLI - Attempt
+//
+//        Scanner scan = new Scanner(System.in);
+//
+//        System.out.println("Hi! Welcome to the VFK app. Please choose from the following options: Add a flight, Display all flights, Add a passenger");
+//
+//        String answer1 = scan.next();
+//
+//        if (answer1.equals("Add a flight")){
+//              System.out.println("Where is your destination?");}
+//          else if (answer1.equals("Display all flights")){
+//              airline1.displayAvailFlights();
+//              airline2.displayAvailFlights();
+//            }
+//          else if (answer1.equals("Add a passenger")){
+//                System.out.println("What is passengers first name?");
+//            }
+//          else {
+//                System.out.println("Please correctly type out one of the options given above.");
+//            }
+//        }
+
+
+
+        
+
 // end of code
     }
 }
