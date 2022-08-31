@@ -42,7 +42,7 @@ passenger1.addFlightBooking(flight1);
 
         List<Object> listOfObject = new ArrayList<>();
         do {
-            System.out.println("Computer Menu");
+            System.out.println("Flight Booking Menu");
             System.out.println("1. Add a new Flight");
             System.out.println("2. Add a new Passenger");
             System.out.println("3. Display all available flights");
@@ -59,11 +59,9 @@ passenger1.addFlightBooking(flight1);
                 System.out.println("What is the flight ID?");
                 int flightID = scanner.nextInt();
                 flight1.setFlightID(flightID);
-
-                System.out.println(flight1.getDestination());
-                System.out.println(flight1.getFlightID());
-                airline1.addNewFlight(flight1);
                 listOfObject.add(flight1);
+                System.out.println("great! we have added a flight to " +flight1.getDestination()+" flight ID: "+flight1.getFlightID());
+                input = (scanner.nextLine());
             } else if (input.equals("2")) {
                 Passenger passenger1 = new Passenger();
                 listOfObject.add(passenger1);
@@ -73,15 +71,12 @@ passenger1.addFlightBooking(flight1);
 //                        if(obj instanceof Flight) {              // So it checks for flights in the object list if true - print flights
 //                            Flight flight1 = (Flight) obj;
 //                            System.out.println(flight1.toString());
-            }
-//        }
 //            }
+//        }
+            }
         }while(!input.equals("4"));
 
     }
-
-
-
 }
 
 //        Flight flight1 = new Flight();
@@ -112,14 +107,3 @@ passenger1.addFlightBooking(flight1);
 //            }
 //          else {
 //                System.out.println("Please correctly type out one of the options given above.");
-
-
-
-
-
-
-        
-
-// end of code
-
-// hello changes
