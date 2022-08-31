@@ -55,7 +55,7 @@ passenger1.addFlightBooking(flight1);
         flight4.setFlightID(88);
 
         airline1.addNewFlight(flight2);
-        airline1.addNewFlight(flight4);
+        airline1.addNewFlight(flight3);
         airline1.addNewFlight(flight4);
 
         Passenger passenger2 = new Passenger();
@@ -74,8 +74,11 @@ passenger1.addFlightBooking(flight1);
         passenger3.setContact("John@Gmail.com");
         passenger4.setContact("Dale@Gmail.com");
 
+        airline1.addPassengerLobby(passenger2);
+        airline1.addPassengerLobby(passenger3);
+        airline1.addPassengerLobby(passenger4);
 
-        
+
 
 
         do {
@@ -128,6 +131,10 @@ passenger1.addFlightBooking(flight1);
 
 
             } else if (input.equals("4")) {
+                airline1.displayAvailFlights();
+                airline1.displayAllPassengers();
+
+
              Flight flight0 = listOfFlight.get(0);
              Passenger passenger0 = listOfPassenger.get(0);
 

@@ -7,10 +7,12 @@ public class Airline {
     private String airlineName;
     private ArrayList<Flight> allFlights;
 
+    private ArrayList<Passenger> allPassengers;
+
     public Airline(String airlineName){
         this.airlineName = airlineName;
         this.allFlights = new ArrayList<>();
-
+        this.allPassengers = new ArrayList<>();
     }
 
     public void addNewFlight(Flight flight){
@@ -36,7 +38,19 @@ public String displayAvailFlights(){
         return null;
 }
 
+public String displayAllPassengers(){
+    if(allPassengers.isEmpty()){
+        return "no passengers in lobby";
+    }else{
+        for (Passenger passenger : allPassengers){
+            System.out.println("Passenger waiting: " +passenger.getName()+" ID: "+passenger.getId());
+        }}
+    return null;
+}
 
+public void addPassengerLobby(Passenger passenger){
+        this.allPassengers.add(passenger);
+}
 
 
     // Getters & Setters
