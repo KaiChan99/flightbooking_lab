@@ -6,31 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-/*
-Flight flight1 = new Flight("Madrid",1);
-Flight flight2=new Flight("London",2);
-Passenger passenger1 = new Passenger("Bob", "Bob@gmail.com", 1);
 
-Airline airline1 = new Airline("Ryanair");
-Airline airline2 = new Airline("EasyJet");
-
-// testing adding and cancelling flights
-        airline1.addNewFlight(flight1);
-        airline1.addNewFlight(flight2);
-        System.out.println(airline1.getAllFlightsCount());
-//airline1.cancelFlight(flight1);
-        System.out.println(airline1.displayAvailFlights());
-
-
-// testing adding passengers to flight
-//flight2.bookPassenger(passenger1);
-//flight2.displayPassengers();
-
-// testing adding flight booking to a passenger
-flight1.bookPassenger(passenger1);
-passenger1.addFlightBooking(flight1);
-        System.out.println(passenger1.getFlightBooking());
-*/
 
 
 
@@ -121,6 +97,7 @@ passenger1.addFlightBooking(flight1);
 
 
                 listOfPassenger.add(passenger1);
+                airline1.addPassengerLobby(passenger1);
 
                 System.out.println("great! we have added a passenger: " +passenger1.getName()+" ID: "+passenger1.getId());
                 input = (scanner.nextLine());
@@ -146,16 +123,9 @@ passenger1.addFlightBooking(flight1);
                 airline1.findFlight(flightID).displayFlightPassengers();
 
                 input = (scanner.nextLine());
-//             Flight flight0 = listOfFlight.get(0);
-//             Passenger passenger0 = listOfPassenger.get(0);
-//
-//             flight0.bookPassenger(passenger0.getId());
-//                flight0.displayPassengers();
-//                System.out.println(flight0.getDestination());
-//                System.out.println(passenger0.getId());
 
             } else if (input.equals("5")){
-//                Flight flight0 = listOfFlight.get(0);
+
 
                 System.out.println("Which flight do you want to cancel? Select ID: ");
                 Integer flightID= scanner.nextInt();
@@ -170,39 +140,3 @@ passenger1.addFlightBooking(flight1);
 
     }
 }
-//                    for(Object obj : listOfObject){
-//                        if(obj instanceof Flight) {              // So it checks for flights in the object list if true - print flights
-//                            Flight flight1 = (Flight) obj;
-//                            System.out.println(flight1.toString());
-//            }
-//        }
-
-
-//        Flight flight1 = new Flight();
-
-//        System.out.println("Hi! Welcome to the VFK app. Please type: Add a flight");
-//
-//        String answer1 = scan.nextLine();
-
-//        if (answer1.equals("Add a flight")){
-//            System.out.println("Where is your destination?");
-//            String destination = scan.nextLine();
-//            flight1.setDestination(destination);
-//            System.out.println("What is the flight ID?");
-//            int flightID= scan.nextInt();
-//            flight1.setFlightID(flightID);
-//            System.out.println(flight1.getDestination());
-//            System.out.println(flight1.getFlightID());
-//            airline1.addNewFlight(flight1);
-//            System.out.println(airline1.displayAvailFlights());
-//
-//        }
-//          else if (answer1.equals("Display all flights")){
-//              airline1.displayAvailFlights();
-
-//            }
-//          else if (answer1.equals("Add a passenger")){
-//                System.out.println("What is passengers first name?");
-//            }
-//          else {
-//                System.out.println("Please correctly type out one of the options given above.");
