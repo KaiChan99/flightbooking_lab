@@ -131,17 +131,28 @@ passenger1.addFlightBooking(flight1);
 
 
             } else if (input.equals("4")) {
+                System.out.println("Here you can see all available flights:");
                 airline1.displayAvailFlights();
+                System.out.println("Here you can see all registered passengers:");
                 airline1.displayAllPassengers();
+                System.out.println("Which passenger would you like to book on a flight? Select ID: ");
+                Integer passengerID= scanner.nextInt();
 
+                System.out.println("Which flight do you want to book? Select ID: ");
+                Integer flightID= scanner.nextInt();
+                airline1.findFlight(flightID).bookPassenger(airline1.findPassenger(passengerID));
+                System.out.println("passenger "+passengerID+" has been booked on flight: "+flightID+" going to "+airline1.findFlight(flightID).getDestination());
+                System.out.println("here you can see all passengers on this flight:");
+                airline1.findFlight(flightID).displayFlightPassengers();
 
-             Flight flight0 = listOfFlight.get(0);
-             Passenger passenger0 = listOfPassenger.get(0);
-
-             flight0.bookPassenger(passenger0);
-                flight0.displayPassengers();
-                System.out.println(flight0.getDestination());
-                System.out.println(passenger0.getId());
+                input = (scanner.nextLine());
+//             Flight flight0 = listOfFlight.get(0);
+//             Passenger passenger0 = listOfPassenger.get(0);
+//
+//             flight0.bookPassenger(passenger0.getId());
+//                flight0.displayPassengers();
+//                System.out.println(flight0.getDestination());
+//                System.out.println(passenger0.getId());
 
             } else if (input.equals("5")){
                 Flight flight0 = listOfFlight.get(0);

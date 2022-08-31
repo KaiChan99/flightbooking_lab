@@ -24,7 +24,7 @@ public class Flight {
   }
 
 // Display passengers on flight
-  public String displayPassengers(){
+  public String displayFlightPassengers(){
     if(flightPassengers.isEmpty()){
       System.out.println("no passengers on flight");
     }else{
